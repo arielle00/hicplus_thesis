@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environments
+.venv/
+env/
+venv/
+ENV/
+
+# Jupyter notebooks
+.ipynb_checkpoints
+
+# Logs
+*.log
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+*.egg-info/
+dist/
+build/
+
+# Large data
+hicplus/data/**/*.npz
+*.hdf5
+*.jar
+*.cool
+=4.12
+*.hic
+*.pkl
+*.mcool
+*.model
+*.txt
+*.png
+*.pt
+*.npy
+logs
+*fa
+*fai
+*.bin
+*.bed
+*.bedGraph
+*.bigWig
+*.bw
+.pyc
+muse_training
+.slurm
+.md
+pycache

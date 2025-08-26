@@ -1,6 +1,12 @@
 from __future__ import print_function
 import argparse as ap
 from math import log10
+import torch
+
+if not torch.cuda.is_available():
+    raise RuntimeError("CUDA is required but not available. Exiting.")
+
+device = torch.device("cuda")
 
 #import torch
 #import torch.nn as nn
@@ -19,6 +25,7 @@ chrs_length = [249250621,243199373,198022430,191154276,180915260,171115067,15913
 #scale = 16
 
 def main(args):
+    # print("Hellooooooo", flush=True)
 
     highres = utils.train_matrix_extract(args.chromosome, 10000, args.inputfile)
 
@@ -35,7 +42,9 @@ def main(args):
     #np.save(infile+"lowres",lowres_sub)
 
     print('start training...')
+    print("----------------------------------",args.outmodel)
     trainConvNet.train(lowres_sub,highres_sub,args.outmodel)
+
 
 
     print('finished...')

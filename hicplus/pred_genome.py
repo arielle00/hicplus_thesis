@@ -6,7 +6,10 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 from torch.autograd import Variable
-import straw
+try:
+    import straw
+except ImportError:
+    import hicstraw as straw
 from scipy.sparse import csr_matrix, coo_matrix, vstack, hstack
 from scipy import sparse
 import numpy as np

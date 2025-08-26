@@ -80,6 +80,7 @@ def getargs():
 def run():
     # Parse Arguments
     args, commands = getargs()
+    print(args)
     # Improve the performance if you don't want to run it
     if commands[0] not in ['-h','--help']:
         args.func(args)
