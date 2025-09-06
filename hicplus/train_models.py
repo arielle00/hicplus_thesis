@@ -25,7 +25,6 @@ chrs_length = [249250621,243199373,198022430,191154276,180915260,171115067,15913
 #scale = 16
 
 def main(args):
-    # print("Hellooooooo", flush=True)
 
     highres = utils.train_matrix_extract(args.chromosome, 10000, args.inputfile)
 
